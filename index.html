@@ -3,122 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valentine's Day Proposal</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #ffebee;
-      font-family: 'Arial', sans-serif;
-      overflow: hidden;
-    }
+  <link rel="stylesheet" href="main.css">
 
-    .book {
-      position: relative;
-      width: 400px;
-      height: 600px;
-      perspective: 1000px;
-    }
+  <title>Reev I Love You</title>
 
-    .page {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      border: 2px solid #ccc;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      transform-origin: left;
-      transition: transform 1s;
-      backface-visibility: hidden;
-      z-index: 1;
-    }
-
-    .cover {
-      background-color: #ff6f61;
-      color: white;
-      cursor: pointer;
-      z-index: 4;
-    }
-
-    .cover h1 {
-      font-size: 2.5rem;
-      animation: pulse 2s infinite;
-      text-align: center;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-    .page1 { z-index: 3; transform: rotateY(-180deg); }
-    .page2 { z-index: 2; transform: rotateY(-180deg); }
-    .page3 { z-index: 1; transform: rotateY(-180deg); }
-
-    .content { text-align: center; width: 100%; }
-
-    .page1 h1 {
-      font-size: 2rem;
-      border: 5px solid;
-      border-image: linear-gradient(45deg, #ff6f61, #ffcccb) 1;
-      padding: 10px;
-      margin: 0 auto;
-    }
-
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .yes-btn, .no-btn, .gift-btn {
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .yes-btn { background-color: #4caf50; color: white; }
-    .no-btn { background-color: #f44336; color: white; }
-    .gift-btn { background-color: #ff6f61; color: white; }
-
-    .page2 h1, .page3 h1 { font-size: 2rem; margin-bottom: 20px; }
-    .page3 p { font-size: 1.2rem; line-height: 1.6; }
-
-    /* Gift GIF */
-    .gift {
-      display: none;
-      width: 150px;
-      margin-bottom: 10px;
-    }
-
-    /* Floating Heart Effect */
-    .heart {
-      position: absolute;
-      bottom: -50px;
-      color: red;
-      font-size: 20px;
-      opacity: 1;
-      animation: floatUp 5s linear infinite;
-    }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 1; }
-      50% { opacity: 0.6; }
-      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
-    }
-  </style>
 </head>
 <body>
   <div class="book">
@@ -155,7 +43,7 @@
     <!-- Page 3 -->
     <div class="page page3" id="page3">
       <div class="content">
-        <h1>For You 💖</h1>
+        <h1>For My Darling 💖</h1>
         <p>
           My darling, you are my guiding light,<br>
           My shelter in the storm, my shining star.<br>
@@ -167,9 +55,20 @@
           And fills me with joy, that makes me whole.<br><br>
           You are my dream, my one and only,<br>
           And my love for you, forever, my destiny.<br>
+          <button class="gift-btn" onclick="turnPage()">One last page!</button>
         </p>
       </div>
     </div>
+
+    <div class="page page3" id="page3">
+      <div class="content">
+        <h1>I want you to be mine forver 🎀</h1>
+        <p>
+         There is no doubt in my mind that you are mine, now and forever. Every moment together brings me overwhelming joy and happiness - my heart swells with love whenever I see you. Being around you, it's like I'm in a constant state of euphoria - everything is just better when you're here. I count myself blessed every day that I get to share my life with you, and I couldn't imagine trading your presence for anything in the world. You are my sunshine, my muse, and most of all, my love.
+        </p>
+      </div>
+    </div>
+
   </div>
 
   <script>
